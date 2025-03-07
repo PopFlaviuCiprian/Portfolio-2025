@@ -1,4 +1,5 @@
 flask
+gunicorn # pentru a rula aplicatia pe render.com
 dotenv  # pentru a securiza parolele
 flask-sqlalchemy # salvam skills in baza de date cand le adaugam din pagina admin
 flask-migrate # pentru actualizare baza date
