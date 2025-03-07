@@ -4,3 +4,5 @@ dotenv  # pentru a securiza parolele
 flask-sqlalchemy # salvam skills in baza de date cand le adaugam din pagina admin
 flask-migrate # pentru actualizare baza date
 python-dotenv # pentru a citi variabilele de mediu dintr-un fisier .env
+flask-mail # pentru a trimite emailuri
+werkzeug # pentru a cripta parolele
