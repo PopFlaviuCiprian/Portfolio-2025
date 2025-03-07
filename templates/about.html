@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}About - Portofoliu{% endblock %}
+
+{% block content %}
+
+<body class="about-section" style="color: burlywood;">
+    <div class="text-center">
+        <h1>About Me</h1>
+        <img src="{{ url_for('static', filename='profil_pic1.jpg') }}" alt="Profil" class="rounded-circle" width="200">
+        <div class="about-me-paragraf">
+            <h4 >Hello! I am Ciprian, a passionate Automation Engineer and technology enthusiast with a particular interest in DevOps automation and scalable infrastructure.</h4>
+            <h4>
+                I actively work on personal projects where I implement CI/CD pipelines, automation with Ansible and container management with Docker and Kubernetes.
+            </h4>
+            
+            <div class="tools-icons">
+                <img src="{{ url_for('static', filename='icons/linux.png')}}" alt="linux icon" width="45" height="45">
+                <img src="{{ url_for('static', filename='icons/python.png')}}" alt="python icon" width="50" height="50">
+                <img src="{{ url_for('static', filename='icons/ansible.png')}}" alt="ansible icon" width="55" height="55">
+                <img src="{{ url_for('static', filename='icons/docker.png')}}" alt="docker icon" width="55" height="55">
+                <img src="{{ url_for('static', filename='icons/kubernetes.png')}}" alt="kubernetes icon" width="50" height="50">
+                <img src="{{ url_for('static', filename='icons/jenkins.png')}}" alt="jenkins icon" width="50" height="50">
+                <img src="{{ url_for('static', filename='icons/prometheus.png')}}" alt="prometheus icon" width="50" height="50">
+                <img src="{{ url_for('static', filename='icons/grafana.png')}}" alt="grafana icon" width="50" height="50">
+                <img src="{{ url_for('static', filename='icons/aws.png')}}" alt="aws icon" width="50" height="50">
+                <img src="{{ url_for('static', filename='icons/selenium.png')}}" alt="selenium icon" width="50" height="50">
+                <img src="{{ url_for('static', filename='icons/proxmox.png')}}" alt="proxmox icon" width="50" height="50">
+            </div>
+        </div>
+        
+    </div>   
+</body>
+
+{% endblock %}

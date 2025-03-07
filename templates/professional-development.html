@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Professional Development - Portofoliu{% endblock %}
+
+{% block content %}
+
+<body class="pro-development">
+    <div class="container-development">
+        <h1 class="text-center mb-4" style="color: burlywood; margin-top: 50px;">Experience and professional development</h1>    
+        <div class="experience-list text-center" style="color: burlywood; font-size: 30px;">
+            <p>My Experience</p>
+        </div>
+        <!--Sectiunea development-->
+        <div class="row">
+            {% for development in professional_development_list %}
+            <div class="col-md-4" style="margin-top: 50px;">
+                <div class="card pro-dev-card text-center mb-3 d-flex justify-content-center align-items-center" style="border-radius: 20px;">
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: burlywood; font-weight: bold;">{{ development.title }}</h3>
+                        <h4 class="card-text" style="color: burlywood; font-weight: bolder;">{{ development.date }}</h4>
+                        <div class="card-text" style="color: burlywood; font-weight: bolder;">
+                            <p>Company:  {{ development.company }}</p>
+                            <p>Location: {{ development.location }}</p>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            {% endfor %}
+    </div>    
+</body>
+{% endblock %}

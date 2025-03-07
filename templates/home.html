@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Portofoliu{% endblock %}
+
+{% block content %}
+<body class="home-page">   
+    <div class="text-center" style="color: burlywood;">
+        <h1>Welcome !</h1>                
+    </div>
+    <div class="experience text-center", style="color: burlywood;">
+        <p class="lead" style="font-size: 30px;"> Discover my professional experience, certifications and projects.</p>
+    </div>
+
+    <div class="social-buttons">
+        <a href="https://linkedin.com/in/flaviu-ciprian-pop" target="_blank" class="icon-button linkedin">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
+                <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5C0 2.12 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 22h5V7H0v15zM7 7v15h5v-8c0-2.21 1.79-4 4-4s4 1.79 4 4v8h5V11c0-4.41-3.59-8-8-8s-8 3.59-8 8z"/>
+            </svg>
+        </a>  
+        <a href="https://github.com/PopFlaviuCiprian/" target="_blank" class="icon-button github">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
+                <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.385.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.04-3.34.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.755-1.333-1.755-1.09-.746.083-.73.083-.73 1.205.085 1.84 1.24 1.84 1.24 1.07 1.835 2.805 1.305 3.49.998.107-.775.42-1.305.764-1.605-2.665-.305-5.467-1.33-5.467-5.93 0-1.31.47-2.385 1.24-3.225-.125-.305-.54-1.535.115-3.195 0 0 1.015-.325 3.325 1.24a11.568 11.568 0 0 1 3.04-.41c1.03.005 2.07.14 3.04.41 2.31-1.565 3.325-1.24 3.325-1.24.655 1.66.24 2.89.115 3.195.77.84 1.24 1.915 1.24 3.225 0 4.61-2.805 5.625-5.475 5.92.43.37.81 1.1.81 2.22 0 1.605-.015 2.895-.015 3.285 0 .32.22.69.825.575C20.565 21.8 24 17.303 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </a>
+        <a href="{{ url_for('static', filename='Resume_Ciprian.pdf') }}" download="Resume_Ciprian.pdf" class="resume-button" style="border-radius: 30px; overflow: hidden;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
+                <path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-6 2v2h12v-2H6z"/>
+            </svg>
+            Resume
+        </a>        
+    </div>   
+</body>
+
+{% endblock %}

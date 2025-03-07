@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Skills - Portofoliu{% endblock %}
+
+{% block content %}
+<body class="skills-page">
+    <div class="container">
+        <h1 class="text-center mb-4" style="color: burlywood;">Skills</h1>
+        <h3 class="text-center mb-5" style="color: burlywood;">Technical and soft skills.</h3>
+    
+        <!-- Secțiunea Skills -->
+        <div class="row">
+            {% for skill in skills %}
+            <!--<div class="container d-flex justify-content-center align-items-center" style="height: 100vh;"> -->
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+                <!-- Card cu imagine rotundă în interior -->
+                <div class="card text-center shadow-lg d-flex justify-content-center align-items-center" style="border-radius: 50px; overflow: hidden; background-color:wheat;">
+                    <!-- <div class="card text-center shadow-lg d-flex justify-content-center align-items-center" style="border-radius: 10px; overflow: hidden;"> --> <!-- cardul cu skill patrat -->
+                    <div class="card-body">
+                        <!-- Afișează imaginea skill-ului -->
+                        <img src="{{ url_for('static', filename=skill.image) }}" alt="{{ skill.name }}" class="img-fluid mb-4" style="width: 150px; height: 150px;">
+                        <h3 class="card-title">{{ skill.name }}</h3>
+                        <!-- <p class="card-text">{{ skill.level }}</p> -->  <!-- il decomentezi daca adaugi levelul skilului-->
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <p class="text-center">Nu există skill-uri disponibile.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+{% endblock %}
+
+

@@ -1,0 +1,6 @@
+
+pip install flask
+pip install dotenv  # pentru a securiza parolele
+pip install flask-sqlalchemy # salvam skills in baza de date cand le adaugam din pagina admin
+pip install flask-migrate # pentru actualizare baza date
+pip install python-dotenv # pentru a citi variabilele de mediu dintr-un fisier .env

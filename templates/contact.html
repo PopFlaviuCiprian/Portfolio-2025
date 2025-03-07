@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Contact - Portofoliu{% endblock %}
+
+{% block content %}
+
+<body class="contact-page">
+    <div class="text-center text-white">
+        <h1 style="font-weight: bold; font-size: 40px;">Contact</h1>
+        <p style="font-size: 25px;">Interested to work with me ?</p>
+        <p style="font-size: 25px;">Let's talk.</p>
+        <form action="/contact" method="POST" class="mt-4">
+            <div class="nume-contact">
+                <label for="name" class="form-label" style="font-size: 30px; font-weight: bold;">Name</label>
+            </div>
+            <div class="center-input">
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            
+            <div class="nume-contact">
+                <label for="email" class="form-label" style="font-size: 30px; font-weight: bold;">Email</label>
+            </div>
+            <div class="center-input">
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            
+            <div class="nume-contact">
+                <label for="message" class="form-label" style="font-size: 30px; font-weight: bold;">Message</label>
+            </div>
+            <div class="center-input">
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="buton-trimite">
+                <button type="submit" class="btn btn-primary">Send message</button>
+            </div>          
+        </form>    
+        {% if success %}
+        <div class="alert alert-success mt-3">Message sent successfully!</div>
+        {% else %}
+            <div class="alert-danger mt-3">Failed to send mail</div>
+        {% endif %}       
+    </div>
+</body>
+{% endblock %}

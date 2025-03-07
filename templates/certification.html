@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Certificări - Portofoliu{% endblock %}
+
+{% block content %}
+
+<body class="certification-page">
+    <div class="container">
+        <h1 class="text-center mb-4" style="color: burlywood;">Certifications</h1>
+        <div class="cert-list text-center" style="color: burlywood; font-size: 30px;">
+            <p>A list of my certifications and credentials obtained.</p>
+        </div>
+        
+        <!-- Secțiunea Certificări -->        
+        <div class="row">
+            {% for cert in certifications %}
+            <div class="col-md-4" style="margin-top: 50px;">
+                <div class="card cert-card text-center mb-3 d-flex justify-content-center align-items-center " style="border-radius: 50px;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: burlywood; font-weight: bold;">{{ cert.name }}</h5>
+                        <div class="card-text" style="color: burlywood; font-weight: bolder;">
+                            <p>{{ cert.organization }} - {{ cert.year }}</p>
+                        </div>                        
+                        {% if cert.link %}
+                        <div class="buton-certificat d-flex justify-content-center">
+                            <a href="{{ cert.link }}" class="btn btn-primary" target="_blank">Certificate</a>
+                        </div>                        
+                        {% endif %}
+                    </div>                                        
+                </div>                
+            </div>
+            
+            
+            {% else %}
+            <p class="text-center">Nu există certificări disponibile.</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+{% endblock %}
